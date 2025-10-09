@@ -23,11 +23,5 @@
   "env": {
     "SPRING_PROFILES_ACTIVE": "production",
     "PORT": "8080"
-  },
-  "functions": {
-    "src/main/java/WEB/AppStart.java": {
-      "runtime": "java17",
-      "memory": 512
-    }
   }
 }
