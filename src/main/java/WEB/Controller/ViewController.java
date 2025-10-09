@@ -35,10 +35,10 @@ public class ViewController {
     @ResponseBody
     public Map<String, Object> getSkills() {
         Map<String, Object> skills = new HashMap<>();
-        skills.put("frontend", Arrays.asList("HTML5", "CSS3", "JavaScript", "React", "Vue.js"));
-        skills.put("backend", Arrays.asList("Java", "Spring Boot", "Node.js", "Python"));
-        skills.put("database", Arrays.asList("MySQL", "PostgreSQL", "MongoDB"));
-        skills.put("tools", Arrays.asList("Git", "Docker", "AWS", "Vercel"));
+        skills.put("frontend", Arrays.asList("HTML", "CSS", "JavaScript", "React"));
+        skills.put("backend", Arrays.asList("Java", "Spring Boot", "Python"));
+        skills.put("database", Arrays.asList("MySQL"));
+        skills.put("tools", Arrays.asList("Git", "Vercel"));
         return skills;
     }
     
@@ -58,7 +58,7 @@ public class ViewController {
                 "id", 2,
                 "title", "포트폴리오 웹사이트",
                 "description", "반응형 디자인의 개인 포트폴리오 웹사이트",
-                "technologies", Arrays.asList("HTML5", "CSS3", "JavaScript", "Spring Boot"),
+                "technologies", Arrays.asList("HTML", "CSS", "JavaScript", "Spring Boot"),
                 "image", "/images/project2.jpg",
                 "github", "https://github.com/yourusername/portfolio"
             ),
@@ -78,16 +78,16 @@ public class ViewController {
     public List<Map<String, Object>> getExperience() {
         return Arrays.asList(
             Map.of(
-                "company", "테크 컴퍼니",
-                "position", "Backend Developer",
-                "period", "2023 - 현재",
-                "description", "Spring Boot 기반 웹 애플리케이션 개발 및 API 설계"
+                "company", "ForeLink (포어링크)",
+                "position", "Network Engineer",
+                "period", "2025.05 - 현재",
+                "description", "네트워크 운영 및 보안 관리"
             ),
             Map.of(
-                "company", "스타트업 XYZ",
-                "position", "Full Stack Developer",
-                "period", "2022 - 2023",
-                "description", "프론트엔드와 백엔드 개발을 담당하며 전체적인 시스템 아키텍처 설계"
+                "company", "이슬림테크",
+                "position", "Network Engineer",
+                "period", "2025.04 - 2025.05",
+                "description", "네트워크 운영 및 보안 관리"
             )
         );
     }
