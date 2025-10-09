@@ -1,29 +1,35 @@
-# Gradle
-.gradle/
+# Spring Boot 관련 파일들 (Vercel 배포에서 제외)
+src/
 build/
-!build/libs/*.jar
+gradle/
+gradlew
+gradlew.bat
+build.gradle
+settings.gradle
 
-# IDE
+# IDE 파일들
 .idea/
 .vscode/
 *.iml
 *.ipr
 *.iws
 
-# OS
+# OS 파일들
 .DS_Store
 Thumbs.db
 
-# Logs
+# 로그 파일들
 *.log
 logs/
 
-# Temporary files
+# 임시 파일들
 *.tmp
 *.temp
 
-# Test files
+# 테스트 파일들
 src/test/
 
-# Documentation
+# 문서 파일들
 README.md
+DEPLOYMENT.md
+USAGE_GUIDE.md
