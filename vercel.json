@@ -2,35 +2,22 @@
   "version": 2,
   "builds": [
     {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "build.gradle",
-      "use": "@vercel/gradle",
-      "config": {
-        "buildCommand": "./gradlew build -x test",
-        "outputDir": "build/libs"
-      }
+      "use": "@vercel/gradle"
     }
   ],
   "routes": [
     {
       "src": "/CSS/(.*)",
-      "dest": "/CSS/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000"
-      }
+      "dest": "/CSS/$1"
     },
     {
       "src": "/JS/(.*)",
-      "dest": "/JS/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000"
-      }
-    },
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000"
-      }
+      "dest": "/JS/$1"
     },
     {
       "src": "/api/(.*)",
