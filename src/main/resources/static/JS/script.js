@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 모든 데이터 로드
     async function loadAllData() {
         try {
+            // Spring Boot용: 동적 URL 생성
             const baseUrl = window.location.origin;
             const [profile, skills, projects, experience] = await Promise.all([
                 fetch(`${baseUrl}/api/profile`).then(res => res.json()),

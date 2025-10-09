@@ -26,18 +26,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // 모든 데이터 로드
     async function loadAllData() {
         try {
-            const baseUrl = window.location.origin;
-            const [profile, skills, projects, experience] = await Promise.all([
-                fetch(`${baseUrl}/api/profile`).then(res => res.json()),
-                fetch(`${baseUrl}/api/skills`).then(res => res.json()),
-                fetch(`${baseUrl}/api/projects`).then(res => res.json()),
-                fetch(`${baseUrl}/api/experience`).then(res => res.json())
-            ]);
+            // Vercel 배포용: 정적 데이터 사용
+            profileData = {
+                name: "개발자",
+                title: "Full Stack Developer",
+                email: "developer@example.com",
+                phone: "010-1234-5678",
+                location: "서울, 대한민국",
+                description: "열정적인 개발자로서 사용자 경험을 중시하며, 최신 기술을 활용한 웹 애플리케이션 개발에 전문성을 가지고 있습니다."
+            };
 
-            profileData = profile;
-            skillsData = skills;
-            projectsData = projects;
-            experienceData = experience;
+            skillsData = {
+                frontend: ["HTML5", "CSS3", "JavaScript", "React", "Vue.js"],
+                backend: ["Java", "Spring Boot", "Node.js", "Python"],
+                database: ["MySQL", "PostgreSQL", "MongoDB"],
+                tools: ["Git", "Docker", "AWS", "Vercel"]
+            };
+
+            projectsData = [
+                {
+                    id: 1,
+                    title: "TodoList 웹 애플리케이션",
+                    description: "Spring Boot와 MySQL을 활용한 할일 관리 시스템",
+                    technologies: ["Java", "Spring Boot", "MySQL", "HTML/CSS/JS"],
+                    github: "https://github.com/yourusername/todolist"
+                },
+                {
+                    id: 2,
+                    title: "포트폴리오 웹사이트",
+                    description: "반응형 디자인의 개인 포트폴리오 웹사이트",
+                    technologies: ["HTML5", "CSS3", "JavaScript", "Spring Boot"],
+                    github: "https://github.com/yourusername/portfolio"
+                },
+                {
+                    id: 3,
+                    title: "E-commerce 플랫폼",
+                    description: "온라인 쇼핑몰 구현 프로젝트",
+                    technologies: ["React", "Node.js", "MongoDB", "Express"],
+                    github: "https://github.com/yourusername/ecommerce"
+                }
+            ];
+
+            experienceData = [
+                {
+                    company: "테크 컴퍼니",
+                    position: "Backend Developer",
+                    period: "2023 - 현재",
+                    description: "Spring Boot 기반 웹 애플리케이션 개발 및 API 설계"
+                },
+                {
+                    company: "스타트업 XYZ",
+                    position: "Full Stack Developer",
+                    period: "2022 - 2023",
+                    description: "프론트엔드와 백엔드 개발을 담당하며 전체적인 시스템 아키텍처 설계"
+                }
+            ];
 
             // 데이터 렌더링
             renderSkills();

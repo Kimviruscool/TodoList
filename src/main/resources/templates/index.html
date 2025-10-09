@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 - 개발자</title>
-    <link rel="stylesheet" th:href="@{/CSS/style.css}" href="/CSS/style.css">
+    <!-- Spring Boot용 Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/CSS/style.css}">
+    <!-- Vercel 배포용 (Spring Boot 사용 시 주석 처리) -->
+    <!-- <link rel="stylesheet" href="/CSS/style.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -204,6 +207,9 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script th:src="@{/JS/script.js}" src="/JS/script.js"></script>
+    <!-- Spring Boot용 Thymeleaf -->
+    <script th:src="@{/JS/script.js}"></script>
+    <!-- Vercel 배포용 (Spring Boot 사용 시 주석 처리) -->
+    <!-- <script src="/JS/script.js"></script> -->
 </body>
 </html>
