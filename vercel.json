@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "build.gradle",
+      "use": "@vercel/gradle",
+      "config": {
+        "buildCommand": "./gradlew build -x test",
+        "outputDir": "build/libs"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "SPRING_PROFILES_ACTIVE": "production",
+    "PORT": "8080"
+  },
+  "functions": {
+    "src/main/java/WEB/AppStart.java": {
+      "runtime": "java17",
+      "memory": 512
+    }
+  }
+}
