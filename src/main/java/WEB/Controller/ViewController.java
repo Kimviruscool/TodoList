@@ -66,7 +66,7 @@ public class ViewController {
                 "id", 3,
                 "title", "E-commerce 플랫폼",
                 "description", "온라인 쇼핑몰 구현 프로젝트",
-                "technologies", Arrays.asList("React", "Node.js", "MongoDB", "Express"),
+                "technologies", Arrays.asList("React"),
                 "image", "/images/project3.jpg",
                 "github", "https://github.com/yourusername/ecommerce"
             )
