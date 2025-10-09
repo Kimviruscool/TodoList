@@ -26,11 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // 모든 데이터 로드
     async function loadAllData() {
         try {
+            const baseUrl = window.location.origin;
             const [profile, skills, projects, experience] = await Promise.all([
-                fetch('/api/profile').then(res => res.json()),
-                fetch('/api/skills').then(res => res.json()),
-                fetch('/api/projects').then(res => res.json()),
-                fetch('/api/experience').then(res => res.json())
+                fetch(`${baseUrl}/api/profile`).then(res => res.json()),
+                fetch(`${baseUrl}/api/skills`).then(res => res.json()),
+                fetch(`${baseUrl}/api/projects`).then(res => res.json()),
+                fetch(`${baseUrl}/api/experience`).then(res => res.json())
             ]);
 
             profileData = profile;
