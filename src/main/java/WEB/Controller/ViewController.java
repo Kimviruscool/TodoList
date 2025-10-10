@@ -26,7 +26,7 @@ public class ViewController {
         profile.put("title", "Full Stack Developer");
         profile.put("email", "developer@example.com");
         profile.put("phone", "010-1234-5678");
-        profile.put("location", "서울, 대한민국");
+        profile.put("location", "인천, 대한민국");
         profile.put("description", "열정적인 개발자로서 사용자 경험을 중시하며, 최신 기술을 활용한 웹 애플리케이션 개발에 전문성을 가지고 있습니다.");
         return profile;
     }
